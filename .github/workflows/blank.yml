@@ -28,8 +28,20 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changesfiles.txt
-          cat changesfiles.txt
+          # git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changesfiles.txt
+          # cat changesfiles.txt
+          commit_id = $(git rev-parse HEAD)
+          parent_commit_id = $(git log -1 --pretty=%P $commit_id)
+          p_commit = $(echo $parent_commit_id | aws '{print $1}')
+          echo "commit id : $commit_id"
+          echo "parent_commit_id: $parent_commit_id"
+          echo "actual parent id : $p_commit"
+          changed_files = $(git diff --name-only $p_coomit $commit_id --diff.filter=ACMR)
+          $(git diff --name-only $p_commit $commit_id --diff-filter=D) > deleted _files.txt
+          echo "changed files: $changed_files"
+          echo "deleted_files" > changed_files.txt
+          echo "deleted_files:" 
+          cat deleted_files.txt
         
 
       # Runs a set of commands using the runners shell
