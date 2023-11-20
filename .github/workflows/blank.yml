@@ -28,9 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          commit_id = $(git rev-parse HEAD)
-          parent_commit_id = $(git log -1 --pretty=%P $commit_id)
-          p_commit = $(echo $parent_commit_id | aws '{print $1}')
+          $commit_id = $(git rev-parse HEAD)
+          $parent_commit_id = $(git log -1 --pretty=%P $commit_id)
+          $p_commit = $(echo $parent_commit_id | aws '{print $1}')
           echo "commit id : $commit_id"
           echo "parent_commit_id: $parent_commit_id"
           echo "actual parent id : $p_commit"
