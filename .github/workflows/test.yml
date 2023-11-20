@@ -35,6 +35,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo "commit_id1=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"
-          echo "commit_id_2=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .ts$ | xargs)"
+          commit_id1=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)
+          commit_id_2=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .ts$ | xargs)
           echo test, and deploy your project.
+          echo $commit_id1 $commit_id_2
