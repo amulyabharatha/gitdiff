@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build
-          cd ./gitdiff; git fetch --all; git cherry-pick --strategy=recursive -X theirs ${{ github.sha }}; git push origin dev
+          git fetch --all; git cherry-pick --strategy=recursive -X theirs ${{ github.sha }}; git push origin dev
           echo test, and deploy your project.
