@@ -38,7 +38,4 @@ jobs:
           echo "start"
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} >> output.txt
           cat output.txt
-          echo "commit_id1=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"  >>  $GITHUB_ENV
-          echo "commit_id_2=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .ts$ | xargs)" >>  $GITHUB_ENV
-          echo test, and deploy your project.
-          echo ${{env.commit_id1 }}  ${{ env.commit_id_2 }}
+          
