@@ -1,3 +1,2 @@
 test
-new line
-testinggit diff
+testinggit diff new
