@@ -28,8 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          # git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changesfiles.txt
-          # cat changesfiles.txt
           commit_id = $(git rev-parse HEAD)
           parent_commit_id = $(git log -1 --pretty=%P $commit_id)
           p_commit = $(echo $parent_commit_id | aws '{print $1}')
