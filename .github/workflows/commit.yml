@@ -34,5 +34,5 @@ jobs:
         run: |
           echo Add other actions to build
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
-          git fetch --all; git cherry-pick --strategy=recursive -X theirs ${{ github.sha }};git commit --allow-empty; git push origin dev
+          git fetch --all; git cherry-pick --strategy=recursive -X theirs ${{ github.sha }} --continue;git commit --allow-empty; git push origin dev
           echo test, and deploy your project.
