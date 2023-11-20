@@ -28,7 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          #echo "hello world"
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changesfiles.txt
           cat changesfiles.txt
         
