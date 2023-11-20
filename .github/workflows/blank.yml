@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          #$commit_id = $(git rev-parse HEAD)
+          
           echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $commit_id
           echo "$parent_commit_id = $(git log -1 --pretty=%P $commit_id)"  >> $parent_commit_id
           echo "$p_commit = $(echo $parent_commit_id | aws '{print $1}')" >> $p_commit
