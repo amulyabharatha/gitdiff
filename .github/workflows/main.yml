@@ -33,10 +33,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build
+          git config --global credential.useHttpPath true
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
           git remote update
-          git fetch
+          git fetch --all
           git checkout --track origin/dev
-          git merge -s --allow-unrelated-histories main
+          git merge -s ours --allow-unrelated-histories main
           git push
           echo test, and deploy your project.
