@@ -35,8 +35,9 @@ jobs:
           echo Add other actions to build
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
           git remote update
-          git fetch 
+          git fetch
           git checkout --track origin/dev
-          git merge -X ours main
+          git pull origin main --allow-unrelated-histories
+          git merge -X ours origin/main
           git push
           echo test, and deploy your project.
