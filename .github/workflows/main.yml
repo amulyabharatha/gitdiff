@@ -37,7 +37,6 @@ jobs:
           git remote update
           git fetch
           git checkout --track origin/dev
-          git pull origin main --allow-unrelated-histories
-          git merge -X ours origin/main
+          git merge -s ours --allow-unrelated-histories main
           git push
           echo test, and deploy your project.
