@@ -38,11 +38,10 @@ jobs:
           git fetch --all && git checkout dev
           echo checkout to dev completed
           ls
-          git config --global pull.ff only origin main --allow-unrelated-histories
+          git config pull.ff only  
+          echo config pull done
+          git pull origin main --allow-unrelated-histories
           echo pull from main completed
-          ls
-          git merge --no-ff --continue
-          echo merge completed
           ls
           git add .
           ls
