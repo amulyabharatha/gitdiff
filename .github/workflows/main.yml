@@ -39,7 +39,7 @@ jobs:
           ls
           git config pull.rebase false
           ls
-          git pull origin main
+          git pull origin main --allow-unrelated-histories
           ls
           git add .
           ls
