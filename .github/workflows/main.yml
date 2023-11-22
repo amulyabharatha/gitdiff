@@ -36,11 +36,13 @@ jobs:
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
           git remote update
           git fetch --all && git checkout dev
-          ls
+          echo checkout to dev completed
           ls
           git pull origin main --allow-unrelated-histories
+          echo pull from main completed
           ls
           git merge --continue
+          echo merge completed
           ls
           git add .
           ls
