@@ -38,7 +38,11 @@ jobs:
           git fetch --all && git checkout dev
           ls
           git config --global pull.ff true main
+          ls
           git add .
+          ls
           git commit -m "message"
-          git push -f 
+          ls
+          git push -f
+          ls
           echo test, and deploy your project.
