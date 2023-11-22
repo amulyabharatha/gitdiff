@@ -36,6 +36,7 @@ jobs:
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
           git remote update
           git fetch --all && git checkout dev
+          ls
           git config --global pull.ff true main
           git add .
           git commit -m "message"
