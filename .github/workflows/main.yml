@@ -41,6 +41,8 @@ jobs:
           ls
           git pull origin main --allow-unrelated-histories
           ls
+          git merge --continue
+          ls
           git add .
           ls
           git commit -m "message"
