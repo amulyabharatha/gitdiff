@@ -40,7 +40,8 @@ jobs:
           ls
           git config pull.ff false
           echo config pull done
-          git merge -X ours main --allow-unrelated-histories
+          #git merge -X ours main --allow-unrelated-histories
+          git merge main --allow-unrelated-histories
           echo merge done
           ls
           git push -f
