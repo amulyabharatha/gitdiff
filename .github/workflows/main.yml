@@ -43,10 +43,6 @@ jobs:
           git merge -X ours main --allow-unrelated-histories
           echo merge done
           ls
-          git add .
-          ls
-          git commit -m "message"
-          ls
           git push -f
           ls
           echo test, and deploy your project.
