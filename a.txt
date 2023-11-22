@@ -1,2 +1,8 @@
 test
+<<<<<<< HEAD
 new line
+=======
+testinggit diff new
+aded args.yml
+new line added
+>>>>>>> 6d30a7eb3fd13d1e74955bae70b8c2e4dabebe63
