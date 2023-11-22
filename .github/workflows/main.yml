@@ -38,8 +38,8 @@ jobs:
           git fetch --all && git checkout dev
           echo checkout to dev completed
           ls
-          git config pull.rebase false  
-          echo config rebase done
+          git config pull.ff only  
+          echo config pull done
           git pull origin main --allow-unrelated-histories
           echo pull from main completed
           ls
