@@ -34,8 +34,9 @@ jobs:
         run: |
           echo Add other actions to build
           git config --global user.email "amulyabharatha@gmail.com"; git config --global user.name "amulyabharatha"
-          git checkout dev
-          git pull origin main
+          git remote update
+          git fetch --all && git checkout dev
+          git config --global pull.ff true main
           git add .
           git commit -m "message"
           git push -f 
