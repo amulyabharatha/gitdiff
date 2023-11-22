@@ -37,6 +37,8 @@ jobs:
           git remote update
           git fetch --all && git checkout dev
           ls
+          git config pull.rebase false
+          ls
           git pull origin main
           ls
           git add .
