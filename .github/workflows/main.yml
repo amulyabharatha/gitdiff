@@ -37,7 +37,6 @@ jobs:
           git remote update
           git fetch --all && git checkout dev
           ls
-          git config --global pull.rebase true
           ls
           git pull origin main --allow-unrelated-histories
           ls
